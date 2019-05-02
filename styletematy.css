@@ -1,0 +1,277 @@
+*, *:before, *:after {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+.active{
+  border-bottom: 3px solid hsl(150, 100%, 50%);
+}
+
+.active:hover{
+  transition-delay: 100ms;
+  transition-duration: 800ms;
+  border-bottom: 3px solid hsl(32, 75%, 50%);
+}
+
+.no-disp{
+  display: none;
+}
+
+.under-nav{
+  width: 100%;
+  border: none;
+  border-top: 5px solid green;
+}
+
+/* ################ GŁÓWNE MENU  ################*/
+
+.main-header{
+  width: 100%;
+  height: 45px;
+  background-color: black;
+}
+.main-nav{ /* pasek górny cały */
+  height: 40px;
+  max-width: 1032px
+}
+.main-nav .logo img{ /* logo */
+  height: 40px;
+  width: auto;
+  float: left;
+  margin-left: 5%;
+}
+.button{
+  display: block;
+  float: right;
+  padding: 0px 2px;
+  height: inherit;
+  text-align: center;
+  color: hsl(134, 84%, 63%);
+  line-height: 40px;
+  margin-right: 30px;
+}
+.button:hover{ /* po najechaniu myszą na przycisk */
+  transition-delay: 100ms;
+  transition-duration: 800ms;
+  color: hsl(32, 75%, 50%);
+}
+.top-menu{
+  list-style-type: none;
+  float: right;
+}
+.top-menu li{
+  float:left;
+}
+
+
+
+#wrapper main{ /* główna zawartość strony */
+  width: 100%;
+  box-shadow: 5px 5px 10px 1px hsla(0, 0%, 0%, 20%);
+  background-color: white;
+  display: table;
+}
+
+/* ############### stopka ############ */
+
+#wrapper footer{
+  display: table;
+  background-color: hsl(134, 84%, 63%);
+  box-shadow: 5px 5px 10px 1px hsla(0, 0%, 0%, 20%);
+  padding: 20px 30px;
+}
+
+#wrapper footer section{
+  height: inherit;
+  width: 45%;
+  float: left;
+  font-size: 14px;
+  line-height:32px;
+}
+#wrapper footer section *{
+  color: hsl(134, 84%, 20%);
+}
+
+#wrapper footer section a:hover{
+  transition-delay: 100ms;
+  transition-duration: 200ms;
+  color: hsl(32, 75%, 50%);
+}
+#wrapper footer section.social-logo{
+  width: 10%;
+  height:32px;
+  float:right;
+}
+
+#wrapper footer section a img#social-logo{
+	height:32px;
+  position:absolute;
+}
+
+
+
+/* ############# nagłówek strony głównej i tematów ############## */
+.forum-naglowek{
+  height: 140px;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.forum-naglowek-tlo{
+  height:  100%;
+  width: 100%;
+  z-index: -1;
+  position:  absolute;
+  opacity: 0.5;
+  background-size: cover;
+  background-position-y: 50%
+}
+
+.forum-naglowek-nazwa{
+  text-align: center;
+  font-size: 40px;
+  padding-top: 25px;
+  color: hsl(0, 0%, 20%);
+}
+
+.forum-naglowek-info{
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 50px;
+  color: hsl(0, 0%, 30%);
+}
+
+
+/* ######### style strony głównej ##########  */
+.glwn-lista-dzialow{
+  width: 100%;
+  padding: 5px 20px;
+}
+.glwn-dzial{
+  clear: both;
+}
+.glwn-dzial-nazwa{
+  color: #333;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: x-large; 
+}
+
+.glwn-temat{
+  height: 60px;
+  clear: both;
+  padding-left: 10px;
+}
+
+.glwn-temat-lewa{
+  width: 40%;
+  float: left;
+}
+
+.glwn-temat-nazwa a{
+  color: #444;
+}
+
+.glwn-temat-opis{
+  font-size: small;
+  color: #777
+}
+
+.glwn-temat-srodek{
+  width: 20%;
+  float: left;
+  font-size: smaller;
+}
+
+.glwn-temat-prawa{
+  width: 40%;
+  float: left;
+  font-size: small;
+}
+
+/* ####### style strony tematu, czyli listy wątków ####### */
+
+.wtk-lista{
+  margin: 0; 
+  padding: 15px 20px;
+}
+.wtk{
+  margin-top: 20px;
+  padding-bottom: 15px;
+  display: flex;
+  font-size: small;
+}
+
+.wtk-lewa{
+  width: 60%;
+}
+
+.wtk-srodek, .wtk-prawa{
+  width: 20%;
+  float: left;
+}
+
+.wtk-naglowek-listy{
+
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 10%);
+  display: flex;
+  font-size: small;
+}
+
+.wtk-post{
+    margin-top: 20px;
+    padding-bottom: 15px;
+   display: flex;
+}
+
+.wtk-post-lewa{
+  width: 60%;
+}
+
+.wtk-post-srodek, .wtk-post-prawa{
+  width: 20%;
+  float: left;
+}
+
+
+
+
+/* przykładowe id - każdy temat ma swoją grafikę */
+#forum-naglowek-tlo-temat-1{
+  background-image: url("/prawie/graphics/backgrounds/main-first.jpg");
+}
+
+
+/* ################ syle do responsywności ################ */
+
+@media (min-width: 1250px){
+  div#wrapper main, div#wrapper footer, div#wrapper header nav{
+    width: 1200px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1250px){
+  div#wrapper main, div#wrapper footer, div#wrapper header nav{
+    width: 950px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1000px){
+  div#wrapper main, div#wrapper footer, div#wrapper header nav{
+    width: 750px;
+  }
+}
+
+@media (max-width: 800px){
+  div#wrapper main, div#wrapper footer, div#wrapper header nav {
+    width: 90%;
+  }
+}
